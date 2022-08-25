@@ -3,7 +3,7 @@ async function getTodos() {
     method: "GET",
   };
   const response = await fetch(
-    `/todos`,
+    `http://localhost:3000/todos`,
     requestOptions
   );
   return await response.json();
@@ -16,7 +16,7 @@ async function addTodo(name) {
     body: JSON.stringify({name})
   };
   const response = await fetch(
-    `/addtodo`,
+    `http://localhost:3000/addtodo`,
     requestOptions
   )
   return await response.json();
@@ -27,7 +27,7 @@ async function deleteTodo(id) {
     method: "DELETE",
   };
   const response = await fetch(
-    `/delete?id=${id}`,
+    `http://localhost:3000/delete?id=${id}`,
     requestOptions
   )
   return await response.json();
