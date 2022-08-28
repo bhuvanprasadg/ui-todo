@@ -36,7 +36,7 @@ function App() {
               <td className="description">{item.name}</td>
               <td><button type="button" className="btn btn-danger" onClick={()=>{
                 deleteTodo(item.id);
-                fetchGoals()
+                fetchGoals();
                 NotificationManager.warning('todo deleted');
               }}>Delete</button></td>
             </tr>
@@ -48,8 +48,8 @@ function App() {
       <Button color="primary" className='add-todo' onClick={()=>{
         if (input.length>0) {
           addTodo(input);
-          fetchGoals()
-          setInput('')  
+          fetchGoals();
+          setInput(''); 
           NotificationManager.success('todo added');
         }else{
           NotificationManager.error('Empty todo');
